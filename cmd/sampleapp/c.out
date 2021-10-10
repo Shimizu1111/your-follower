@@ -1,0 +1,7 @@
+mode: set
+example.com/main/cmd/sampleapp/main.go:13.13,28.2 13 0
+example.com/main/cmd/sampleapp/main.go:30.58,32.16 2 0
+example.com/main/cmd/sampleapp/main.go:35.2,35.42 1 0
+example.com/main/cmd/sampleapp/main.go:32.16,33.21 1 0
+example.com/main/cmd/sampleapp/main.go:35.42,36.21 1 0
+example.com/main/cmd/sampleapp/main.go:40.15,42.2 1 1
