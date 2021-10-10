@@ -9,5 +9,15 @@
 <body>
   <h1>helloworld</h1>
   <h2>{{ .Age }}</h2>
+  <form action="follow" method="post">
+    <table>
+      <tr>
+        <td>検索したいアカウント内容</td>
+        <td><input type="text" name="name"></td>
+      </tr>
+    </table>
+    <input type="submit" value="確認画面へ">
+    <a href="../result">結果の画面</a>
+  </form>
 </body>
 </html>

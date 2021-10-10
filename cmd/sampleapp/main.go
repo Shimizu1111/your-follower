@@ -21,9 +21,12 @@ func main() {
 	sub.Sub()
 	fmt.Println(test)
 	http.HandleFunc("/", mainHandler)
+	// 暫定的に今ここに置いているが、/follow、のPOSTを受け取った関数の中でこのhandleをするのでおそらく変える
+	http.HandleFunc("/result", follow.ResultOutput)
+	// この処理は、POSTを受け取る処理、画面出力はしない
+	http.HandleFunc("/follow", follow.FollowInfoGet)
 	defer http.ListenAndServe(":8000", nil)
 	follow.FollowerInfoCompare()
-	follow.FollowInfoGet()
 	follow.FollowerInfoGet()
 	// テストファイルの動作確認用,integration
 	integration.Hello()
@@ -35,7 +38,6 @@ func main() {
 		Age:  23,
 	}
 	fmt.Println(p2)
-	defer follow.ResultOutput()
 }
 
 func mainHandler(w http.ResponseWriter, r *http.Request) {
