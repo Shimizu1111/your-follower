@@ -23,7 +23,7 @@ func main() {
 	http.HandleFunc("/", mainHandler)
 	// 暫定的に今ここに置いているが、/follow、のPOSTを受け取った関数の中でこのhandleをするのでおそらく変える
 	http.HandleFunc("/result", follow.ResultOutput)
-	// この処理は、POSTを受け取る処理、画面出力はしない
+	// この処理は、フォームで入力された内容をPOSTで受け取る処理、画面出力はしない
 	http.HandleFunc("/follow", follow.FollowInfoGet)
 	defer http.ListenAndServe(":8000", nil)
 	follow.FollowerInfoCompare()
